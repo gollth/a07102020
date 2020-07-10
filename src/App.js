@@ -21,7 +21,6 @@ import flashMessage from './FlashMessage';
 export default function App() {
   const defaultPosts = [];
   const [username, setUsername] = useState('');
-  const [usernameRegister, setUsernameRegister] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
   const [posts, setPosts] = useState(defaultPosts);
   const [theme, setTheme] = useState({
@@ -44,7 +43,6 @@ export default function App() {
           <ChangeTheme theme={theme} setTheme={setTheme} />
           <UserBar
             username={username} setUsername={setUsername}
-            usernameRegister={usernameRegister} setUsernameRegister={setUsernameRegister}
             loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
           <br />
           <hr />

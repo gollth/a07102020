@@ -3,8 +3,8 @@ import React, { useState, FormEvent, ChangeEvent } from 'react';
 interface registerProps {
   // setUsername: string,
   usernameRegister: string,
-  setUsernameRegister(usernameRegister: string): string,
   setLoggedIn(loggedIn: boolean): boolean
+  setUsernameRegister(usernameRegister: string): void,
 }
 
 
