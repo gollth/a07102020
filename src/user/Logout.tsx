@@ -3,13 +3,12 @@ import React from 'react';
 interface LogoutProps {
   username: string,
   setUsername(username: string): string,
-  setLoggedIn(loggedIn: boolean): boolean
 }
 
-export default function Logout ({ username, setUsername, setLoggedIn }: LogoutProps) {
+export default function Logout ({ username, setUsername }: LogoutProps) {
   const logout = (e: React.FormEvent<HTMLFormElement>) => {
     setUsername('');
-    setLoggedIn(false);
+    // Here is now missing a way to tell the higher level components, that we have to log out!
     e.preventDefault();
   };
   return (

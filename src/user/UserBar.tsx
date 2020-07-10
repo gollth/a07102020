@@ -8,14 +8,13 @@ interface userProps {
   username: string,
   setUsername(username: string): string,
   loggedIn: boolean,
-  setLoggedIn(loggedIn: boolean): boolean
 }
 
 export default function UserBar(props: userProps) {
-  const { username, setUsername, loggedIn, setLoggedIn } = props;
+  const { username, setUsername, loggedIn } = props;
   const [ usernameRegister, setUsernameRegister ] = useState('');
   const details = () => {
-    return <Logout username={username} setUsername={setUsername} setLoggedIn={setLoggedIn} />;
+    return <Logout username={username} setUsername={setUsername} />;
   };
   if (loggedIn) { return details(); }
   return (
@@ -23,12 +22,12 @@ export default function UserBar(props: userProps) {
       <Login
         username={username}
         setUsername={setUsername}
-        setLoggedIn={setLoggedIn} />
+      />
       <Register
         // setUsername={setUsername}
         usernameRegister={usernameRegister}
         setUsernameRegister={setUsernameRegister}
-        setLoggedIn={setLoggedIn} />
+      />
     </>
   );
 }

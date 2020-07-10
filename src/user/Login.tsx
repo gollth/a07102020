@@ -3,11 +3,10 @@ import React, { useState, FormEvent, ChangeEvent } from 'react';
 interface loginProps {
   username: string,
   setUsername(username: string): string,
-  setLoggedIn(loggedIn: boolean): boolean
 }
 
 export default function Login(props: loginProps) {
-  const { username, setUsername, setLoggedIn } = props;
+  const { username, setUsername } = props;
   const [ password, setPassword ] = useState('');
   const [err, setErr] = useState('');
   function handleUsername(e: FormEvent<HTMLFormElement> ) {
@@ -15,7 +14,7 @@ export default function Login(props: loginProps) {
       if (password === null) { setErr('blank password'); } else {
         if (username.length < 2) { setErr('username must be at least 2 characters'); } else {
           setUsername(username);
-          setLoggedIn(true);
+          // Here is now missing a way to tell the higher level components, that we have to log in!
         }
       }
     }

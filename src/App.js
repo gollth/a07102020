@@ -43,7 +43,8 @@ export default function App() {
           <ChangeTheme theme={theme} setTheme={setTheme} />
           <UserBar
             username={username} setUsername={setUsername}
-            loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+            loggedIn={loggedIn}
+          />
           <br />
           <hr />
           <Switch>
