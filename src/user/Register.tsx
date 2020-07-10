@@ -4,12 +4,13 @@ interface registerProps {
   // setUsername: string,
   usernameRegister: string,
   setUsernameRegister(usernameRegister: string): void,
+  onLogin(user: string): void
 }
 
 
 export default function Register(props: registerProps) {
   // const { setUsername, usernameRegister,  setUsernameRegister, setLoggedIn } = props;
-  const { usernameRegister,  setUsernameRegister } = props;
+  const { usernameRegister,  setUsernameRegister, onLogin } = props;
   const [err, setErr] = useState('');
   const [pwdRegister, setPwd] = useState('');
   const [pwdRepeat, setPwdRepeat] = useState('');
@@ -18,7 +19,7 @@ export default function Register(props: registerProps) {
       if (pwdRegister === '') { setErr('password is blank'); } else {
         if (pwdRepeat === '') { setErr('password confirm is blank'); } else {
           if (pwdRegister !== pwdRepeat) { setErr('The passwords do not match'); } else {
-            // Here is now missing a way to tell the higher level components, that we have to log in!
+            onLogin(usernameRegister);
           }
         };
       };

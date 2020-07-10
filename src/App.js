@@ -34,6 +34,10 @@ export default function App() {
   function findPost(posts, params) {
     return posts.find(post => post.slug === params.postSlug) || posts[0];
   }
+  function handleLogin(user) {
+    setUsername(user);
+    setLoggedIn(true);
+  }
   return (
     <ThemeContext.Provider value={theme} >
       <Router>
@@ -44,6 +48,7 @@ export default function App() {
           <UserBar
             username={username} setUsername={setUsername}
             loggedIn={loggedIn}
+            onLogin={handleLogin}
           />
           <br />
           <hr />

@@ -3,12 +3,13 @@ import React from 'react';
 interface LogoutProps {
   username: string,
   setUsername(username: string): string,
+  onLogout(): void,
 }
 
-export default function Logout ({ username, setUsername }: LogoutProps) {
+export default function Logout ({ username, setUsername, onLogout }: LogoutProps) {
   const logout = (e: React.FormEvent<HTMLFormElement>) => {
     setUsername('');
-    // Here is now missing a way to tell the higher level components, that we have to log out!
+    onLogout();
     e.preventDefault();
   };
   return (
