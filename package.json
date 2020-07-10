@@ -1,0 +1,85 @@
+{
+  "name": "chapter3_2",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^2.1.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:nowatch": "npm run test -- --watchAll=false",
+    "eject": "react-scripts eject",
+    "lint": "eslint . --ext .js,.tsx"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "max-len": [
+        "error",
+        120
+      ],
+      "no-dupe-keys": "error",
+      "no-duplicate-case": "error",
+      "no-unreachable": "error",
+      "no-dupe-args": "error",
+      "prefer-const": "error",
+      "eqeqeq": "error",
+      "semi": "error",
+      "no-var": "error",
+      "no-fallthrough": "error",
+      "no-new": "error",
+      "no-redeclare": "error",
+      "vars-on-top": "error",
+      "no-mixed-spaces-and-tabs": "error",
+      "no-tabs": "error",
+      "no-trailing-spaces": "error",
+      "no-irregular-whitespace": "error",
+      "no-unused-vars": "error",
+      "no-nested-ternary": "error",
+      "no-multiple-empty-lines": "error",
+      "no-use-before-define": "error",
+      "no-extra-boolean-cast": "error",
+      "no-extra-parens": "error",
+      "default-case": "error",
+      "no-else-return": "error",
+      "no-eq-null": "error",
+      "no-eval": "error",
+      "no-loop-func": "error",
+      "no-native-reassign": "error",
+      "no-param-reassign": "error",
+      "no-self-compare": "error",
+      "accessor-pairs": "error",
+      "block-scoped-var": "error",
+      "no-throw-literal": "error",
+      "camelcase": "error",
+      "no-useless-rename": "error",
+      "prefer-rest-params": "error",
+      "prefer-template": "error",
+      "comma-spacing": "error"
+    }
+  },
+  "browserslist": [
+    ">1%",
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "@types/node": "^14.0.20",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "react-router-dom": "^5.2.0",
+    "typescript": "^3.9.6"
+  }
+}

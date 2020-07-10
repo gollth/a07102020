@@ -1,0 +1,42 @@
+{
+	"posts": [
+		{
+			"id": "react-hooks",
+			"title": "React Hooks",
+			"slug": "react-hooks",
+			"content": "The greatest thing since sliced bread!",
+			"author": "Daniel Bugl"
+		},
+		{
+			"id": "react-fragments",
+			"title": "Using React Fragments",
+			"slug": "react-fragments",
+			"content": "Keeping the DOM tree clean!",
+			"author": "Daniel Bugl"
+		}
+	],
+	"users": [
+		{
+			"id": 1,
+			"username": "Daniel Bugl",
+			"password": "supersecure42"
+		}
+	],
+	"themes": [
+		{
+			"id": 1,
+			"primaryColor": "deepskyblue",
+			"secondaryColor": "coral"
+		},
+		{
+			"id": 2,
+			"primaryColor": "orchid",
+			"secondaryColor": "mediumsea-green"
+		},
+		{
+			"id": 3,
+			"primaryColor": "deepskyblue",
+			"secondaryColor": "slategray"
+		}
+	]
+}
